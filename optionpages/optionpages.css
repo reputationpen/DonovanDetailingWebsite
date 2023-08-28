@@ -1,0 +1,11 @@
+body{
+    padding: 35px 25px;
+}
+.content{
+    width: clamp(250px,50vw,1000px);
+    margin: auto;
+}
+p{
+    margin: 0 clamp(2px, 2vw, 40px);
+    word-wrap: normal;
+}

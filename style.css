@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins:wght@700&family=Signika+Negative&display=swap');
+
+:root{
+    --background: #191919;
+    --hover-accent: #912727;
+    --primary-accent: #FFFFFF
+}
+
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--background);
+    opacity: 0;
+    transition: opacity .1s;
+}
+nav{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 25px 30px;
+    box-sizing: border-box;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-image: url("assets/background.jpg");
+    background-size: cover;
+}
+.title{
+    display: grid;
+    row-gap: 10px;
+    margin-bottom: 100px;
+    padding: 0px 40px;
+}
+.downarrow{
+    position: absolute;
+    bottom: 40px;
+    font-size: 30px;
+    color: var(--primary-accent);
+    transition: .2s;
+}
+.downarrow:hover{
+    font-size: 35px;
+    color: var(--hover-accent);
+    cursor: pointer;
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--primary-accent);
+    font-size: clamp(33px,3vw,69px);
+    text-align: center;
+    cursor: default;
+    user-select: none;
+}
+span{
+    transition: .2s;
+    cursor: default;
+}
+span:hover{
+    color: var(--hover-accent);
+}
+h2{
+    color: var(--primary-accent);
+    font-family: 'Poppins', sans-serif;
+    cursor: default;
+    font-weight: 700;
+}
+h3{
+    color: var(--primary-accent);
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 400;
+    font-size: clamp(15px,1vw,19px);
+    cursor: default;
+}
+p{
+    color: var(--primary-accent);
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+}
+.pricing{
+    height: 100vh;
+    padding: 40px 0px;
+    box-sizing: border-box;
+}
+
+.line{
+    background-color: var(--primary-accent);
+    border-radius: 5px;
+    height: 3px;
+    width: clamp(250px,50vw,1000px);
+    margin: 45px auto;
+    margin-top: 25px;
+    transition: .2s;
+}
+.line:hover{
+    background-color: var(--hover-accent);
+}
+.options{
+    box-sizing: border-box;
+    height: auto;
+    margin: auto;
+    width: clamp(250px,50vw,920px);
+    padding: 0px 0px;
+    display: grid;
+    grid: 35vh 35vh / auto auto auto;
+    row-gap: 10px;
+    column-gap: 10px;
+    color: var(--primary-accent);
+}
+.options > span{
+    transition: .2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    border-radius: 20px;
+    cursor: pointer;
+    border-color: var(--primary-accent);
+    background-clip: padding-box;
+    border-width: 3px;
+    border-style: solid;
+    padding: 30px;
+    text-decoration: none;
+    filter: saturate(0%);
+}
+
+.options > span:hover{
+    border-color: var(--hover-accent);
+    filter: saturate(100%)
+}
+.options:hover span:not(:hover){
+    filter: brightness(80%) saturate(0%);
+    border-color: #777777;
+}
+
+@media only screen and (max-width: 1010px) {
+    .options {
+        grid: 35vh 35vh 35vh 35vh 35vh 35vh / auto;
+        margin-bottom: 40px;
+    }
+}
+
+.options > span > *{
+    display: block;
+    text-align: left;
+    user-select: none;
+}
+
+#optionsdd > * > *{
+    padding-right: 6px;
+}
+
+a{
+    color: var(--primary-accent);
+    text-decoration: none;
+}
